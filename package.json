@@ -4,14 +4,18 @@
     "clean": "rimraf output && rimraf .pulp-cache",
     "build": "pulp build -- --censor-lib --strict",
     "test": "pulp test",
-
     "bench:build": "purs compile 'bench/**/*.purs' 'src/**/*.purs' 'bower_components/*/src/**/*.purs'",
+    "bench:build:rollup": "rollup --config",
     "bench:run": "node -e 'require(\"./output/Bench.Main/index.js\").main()'",
-    "bench": "npm run bench:build && npm run bench:run"
+    "bench:run:rollup": "node output/bundle.js",
+    "bench": "npm run bench:build && npm run bench:run",
+    "bench:rollup": "npm run bench:build && npm run bench:build:rollup && npm run bench:run:rollup"
   },
   "devDependencies": {
     "pulp": "^10.0.4",
     "purescript-psa": "^0.5.0-rc.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-purs": "^1.0.38"
   }
 }
