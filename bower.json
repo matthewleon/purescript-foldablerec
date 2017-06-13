@@ -1,0 +1,28 @@
+{
+  "name": "purescript-foldablerec",
+  "homepage": "https://github.com/matthewleon/purescript-foldablerec",
+  "description": "Monadic folds in constant stack space.",
+  "authors": [
+    "Matthew Leon <ml@matthewleon.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthewleon/purescript-foldablerec.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-tailrec": "^3.3.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^3.0.0"
+  }
+}
