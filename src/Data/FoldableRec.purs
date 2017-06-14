@@ -25,6 +25,7 @@ forRec_
 forRec_ = flip traverseRec_
 
 -- commented out lines below due to some instancesigs issues
+-- https://github.com/purescript/purescript/issues/2941
 instance foldableMRArray :: FoldableMR Array where
   foldMR :: forall m a b. MonadRec m => (a -> b -> m a) -> a -> Array b -> m a
   foldMR opEffect accum xs = tailRecM2 go accum 0 
